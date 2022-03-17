@@ -10,7 +10,7 @@ def login_view(request):
             users = Signups.objects.get(useremail = useremails)
             if users.passwords == userpassword:
                 response = redirect("/home/")
-                response.create_cookie("logedin", useremails)
+                response.set_cookie("logedin", useremails)
                 return response
             else:
                 errors = 'Wrong password please try again'
