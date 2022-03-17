@@ -16,3 +16,5 @@ class Profiles(models.Model):
 class Posts(models.Model):
     postby = models.ForeignKey(Signups, on_delete = models.CASCADE)
     post_image = models.ImageField(upload_to = 'posts/')
+    post_text = models.TextField()
+    post_dates = models.DateTimeField(auto_now=True)
