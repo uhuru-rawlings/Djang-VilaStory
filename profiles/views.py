@@ -14,6 +14,12 @@ def profile_view(request):
     }
     return render(request, "profiles.html",context)
 
+def logout_view(request):
+    if request.method == 'POST':
+        userimages = request.FILES['userimage']
+        biotext = request.POST['userimage']
+    return redirect('/')
+
 
 def logout_view(request):
     return redirect('/')
