@@ -4,5 +4,11 @@
 {% block navbar %}
    {% include 'navbar.html' %}
 {% endblock %}
-{% block content %}{% endblock %}
+{% block content %}
+<div class="profiles">
+   <div class="names">{{ users.useremail }}</div>
+   <div class="names">{{ users.phone }}</div>
+   <div class="names">{{ users.village }}</div>
+</div>
+{% endblock %}
 {% block footer %}{% endblock %}
