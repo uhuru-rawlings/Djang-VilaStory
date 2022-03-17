@@ -6,7 +6,7 @@
    <section>
        <p>Welcome back <span class="logo">VilaStory</span> your one stop for stories.</p>
        <p class="text-center" id="reg">SignIn</p>
-       <form action="{% url 'signin' %}" method="post">
+       <form action="{% url 'login' %}" method="post">
            <div class="text-center text-danger">{{ errors }}</div>
            {% csrf_token %}
            <div class="form-group">

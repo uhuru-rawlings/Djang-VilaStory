@@ -7,14 +7,13 @@ def login_view(request):
         useremails = request.POST['useremail']
         userpassword = request.POST['userpassword']
         try:
-            users = Signups.objects.get(useremail=useremails)
+            users = Signups.objects.get(useremail = useremails)
             if users.passwords == userpassword:
                 response = redirect("/home/")
                 response.create_cookie("logedin", useremails)
                 return response
             else:
                 errors = 'Wrong password please try again'
-                return redirect("/")
         except:
             errors = "user dont exist, please try gain"
     context = {
