@@ -67,6 +67,17 @@ section{
     font-weight: bold;
     font-size: 20px;
 }
+#flex_links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#flex_links a{
+    color:cornsilk;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
 input[type=checkbox]:checked:before {
   background: cornsilk;
     color: rgba(255,255,255, 0.85) !important;
