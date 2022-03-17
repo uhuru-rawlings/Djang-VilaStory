@@ -84,7 +84,7 @@ input[type=checkbox]:checked:before {
   border: 2px solid rgb(37, 43, 40);
   border-radius:4px;
 }
-#useremail,#userpassword, #phonenumber{
+#useremail,#userpassword, #phonenumber, #userimages{
     border: none;
     outline: none;
     height: 40px;
