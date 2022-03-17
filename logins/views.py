@@ -9,4 +9,6 @@ def login_view(request):
 
 def login_meth(request):
    if request.method == 'POST':
-       pass
+        useremails = request.POST['useremail']
+        phonenumber = request.POST['phonenumber']
+        users = Signups.objects.get(useremail=useremails)

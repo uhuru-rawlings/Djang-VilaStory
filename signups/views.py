@@ -17,7 +17,7 @@ def signup_meth(request):
             # check if username exists
             users = Signups.objects.get(useremail=useremails)
             errors = 'user with this email already exist, please try login in.'
-            return redirect('/')
+            return redirect('/signup/')
         except:
             new_user = Signups(useremail = useremails, phone = phonenumber, village = uservillage, passwords = userpassword)
             new_user.save()
