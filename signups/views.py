@@ -9,4 +9,8 @@ def signup_view(request):
 
 def signup_meth(request):
     if request.method == 'POST':
-        pass
+        useremails = request.POST['useremail']
+        phonenumber = request.POST['phonenumber']
+        uservillage = request.POST['userimages']
+        userpassword = request.POST['userpassword']
+        useremails = request.POST['useremail']
