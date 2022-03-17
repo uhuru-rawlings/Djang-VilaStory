@@ -6,3 +6,7 @@ def login_view(request):
         'title':'vilastory | login',
     }
     return render(request, "login.html",context)
+
+def login_meth(request):
+   if request.method == 'POST':
+       pass

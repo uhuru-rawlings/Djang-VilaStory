@@ -6,3 +6,7 @@ def signup_view(request):
         'title':'vilastory | signup',
     }
     return render(request, "signup.html",context)
+
+def signup_meth(request):
+    if request.method == 'POST':
+        pass

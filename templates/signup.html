@@ -6,7 +6,7 @@
 <section style="margin-top: 20px;">
     <p>Welcome to <span class="logo">VilaStory</span> where we tell the story to those who miss them.</p>
     <p class="text-center" id="reg">SignIn</p>
-    <form action="" method="post">
+    <form action="{% url 'create_account' %}" method="post">
         {% csrf_token %}
         <div class="form-group">
             <label for="useremail">useremail</label>
