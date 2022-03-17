@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from signups.models import Signups
 # Create your views here.
 def signup_view(request):
     context = {
