@@ -6,10 +6,24 @@
 {% endblock %}
 {% block content %}
 <div class="profiles">
-   <div class="image_profile"><span><i class="fa-solid fa-user"></i></span></div>
-   <div class="names">{{ users.useremail }}</div>
-   <div class="names">{{ users.phone }}</div>
-   <div class="names">{{ users.village }}</div>
+   <div class="image_profile"><span><img src="../static/images/download.png" height="70px" width="70px" alt=""></span></div>
+   <div class="names"><span style="font-weight: bold;">Email:</span> {{users.useremail }}</div>
+   <div class="names"><span style="font-weight: bold;">Phone:</span> {{users.phone }}</div>
+   <div class="names"><span style="font-weight: bold;">Village:</span> {{users.village }}</div>
+   <div class="names"><span style="font-weight: bold;">Bio:</span> {{users.village }}</div>
+</div>
+<div class="updatenio">
+   <form action="" method="post">
+      <div class="form-group">
+         <input type="file" name="userimage" id="userimage" class="form-control">
+      </div>
+      <div class="form-group">
+         <textarea name="biotext" id="biotext" cols="30" rows="10" class="form-control"></textarea>
+      </div>
+      <div class="form-group">
+         <input type="submit" value="Sign-Up" id="signin" style="margin-bottom: 30px;">
+      </div>
+   </form>
 </div>
 {% endblock %}
 {% block footer %}{% endblock %}
