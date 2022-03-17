@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.logo a{
+    color: cornsilk;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Black Ops One', cursive !important;
+    font-family: 'Lato', sans-serif !important;
+    font-family: 'Lobster', cursive !important;
+    font-family: 'Pacifico', cursive !important;
+}
+ul li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.navlists{
+    align-items: center;
+}
+nav .navlists ul li{
+    display: inline;
+    /* padding: 10px; */
+}
+nav .navlists ul li a{
+    text-decoration: none;
+    padding: 20px 10px 15px 10px;
+    font-size: 20px;
+    font-weight: 500;
+    color:cornsilk;
+}
+nav{
+    background-color: rgb(37, 43, 40);
+    align-items: center;
+    padding: 8px;
+}
+#nav{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
