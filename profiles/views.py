@@ -7,9 +7,7 @@ def profile_view(request):
     except:
         return redirect("/")
     users = Signups.objects.filter(useremail = user).first()
-    print("###########################")
-    print(users.id)
-    print("###########################")
+
     context = {
         'title':'vilastory | profiles',
         'users':users
