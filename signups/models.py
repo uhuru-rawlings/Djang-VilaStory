@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Signups(models.Model):
-    useremail = models.CharField()(max_length=200)
+    useremail = models.EmailField(max_length=200)
     phone = models.CharField(max_length=200)
     village = models.CharField(max_length=200)
     passwords = models.CharField(max_length=300)
