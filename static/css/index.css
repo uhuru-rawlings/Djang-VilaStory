@@ -84,7 +84,7 @@ input[type=checkbox]:checked:before {
   border: 2px solid rgb(37, 43, 40);
   border-radius:4px;
 }
-#useremail,#userpassword{
+#useremail,#userpassword, #phonenumber{
     border: none;
     outline: none;
     height: 40px;
@@ -92,6 +92,9 @@ input[type=checkbox]:checked:before {
     padding-left: 20px;
     font-size: 16px;
     color: rgb(37, 43, 40);
+    /* border-radius: 20px; */
+    box-shadow: inset 6px 6px 6px #cbced1,
+                 inset -6px -6px 6px #ffffff;
 }
 #signin{
     width: 100%;
