@@ -23,7 +23,7 @@ def profile_view(request):
 def savebio_view(request):
     if request.method == 'POST':
         userimages = request.FILES['userimage']
-        biotext = request.POST['userimage']
+        biotext = request.POST['biotext']
 
         user = request.COOKIES['logedin']
         get_user = Signups.objects.get(useremail= user)
@@ -34,10 +34,10 @@ def savebio_view(request):
              about_me.aboutme = biotext
              about_me.save()
         else:
-            about_me = Profiles(users=get_user,userimage = userimages, aboutme=biotext)
+            about_me = Profiles(users=get_user,userimages = userimages, aboutme=biotext)
             about_me.save()
 
-    return redirect('/')
+    return redirect('/profile/')
 
 
 def logout_view(request):
