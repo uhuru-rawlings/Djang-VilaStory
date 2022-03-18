@@ -17,6 +17,7 @@ class Posts(models.Model):
     postby = models.ForeignKey(Signups, on_delete = models.CASCADE)
     post_image = models.ImageField(upload_to = 'posts/', null = True)
     post_text = models.TextField()
+    post_village = models.CharField(max_length=200)
     post_dates = models.DateTimeField(auto_now=True)
 
     class Meta:

@@ -47,6 +47,7 @@ def addpost_view(request):
             get_user = Signups.objects.get(useremail= user)
             new_posts = Posts(postby=get_user, post_text=poststext)
             new_posts.save()
+            return redirect("/home/")
 
 def addpostimages_view(request):
         if request.method == 'POST':
@@ -56,6 +57,7 @@ def addpostimages_view(request):
             get_user = Signups.objects.get(useremail= user)
             new_posts = Posts(postby=get_user,post_image = postsimages, post_text=captionposts)
             new_posts.save()
+            return redirect("/home/")
 
 def logout_view(request):
         user = request.COOKIES['logedin']
