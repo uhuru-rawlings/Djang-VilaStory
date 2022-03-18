@@ -37,29 +37,36 @@
    </div>
 </div>
 <div class="uploadposts" id="uploadpost">
-   <form action="" method="post" enctype="multipart/form-data">
+   <div class="form" id="subformclass">
       <p>Create a post. only use one side of the form.</p>
      <div class="flex_forms">
-         <div class="text_posts">
-            <p><div class="text-danger">*Only textpost that has no images.*</div></p>
-            <div class="form-group">
-               <textarea name="poststext" id="poststext" cols="30" rows="10" placeholder="Whats happening"></textarea>
-            </div>
+         <form action="" method="post" enctype="multipart/form-data">
+            <div class="text_posts">
+               <p><div class="text-danger">*Only textpost that has no images.*</div></p>
+               <div class="form-group">
+                  <textarea name="poststext" id="poststext" required cols="30" rows="10" placeholder="Whats happening"></textarea>
+               </div>
+               <div class="form-group">
+                  <input type="submit" value="Post" id="signin" style="margin-bottom: 70px;">
+               </div>
+         </form>
       </div>
          <div class="imageposts">
-            <p><div class="text-danger">*Only textpost that has images.*</div></p>
-            <div class="form-group">
-               <input type="file" name="postsimages" id="postsimages">
-            </div>
-            <div class="form-group">
-               <textarea name="captionposts" id="captionposts" cols="30" rows="10" placeholder="Write your caption here"></textarea>
-            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                  <p><div class="text-danger">*Only textpost that has images.*</div></p>
+                  <div class="form-group">
+                     <input type="file" name="postsimages" required id="postsimages">
+                  </div>
+                  <div class="form-group">
+                     <textarea name="captionposts" id="captionposts" required cols="30" rows="10" placeholder="Write your caption here"></textarea>
+                  </div>
+                  <div class="form-group">
+                     <input type="submit" value="Post" id="signin" style="margin-bottom: 70px;">
+                  </div>
+            </form>
          </div>
      </div>
-      <div class="form-group">
-         <input type="submit" value="Sign-In" id="signin" style="margin-bottom: 70px;">
-      </div>
-   </form>
+   </div>
 </div>
 {% endblock %}
 {% block footer %}{% endblock %}

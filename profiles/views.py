@@ -40,6 +40,13 @@ def savebio_view(request):
     return redirect('/profile/')
 
 
+def addpost_view(request):
+        if request.method == 'POST':
+            poststext = request.POST['poststext']
+            # single
+            poststext = request.POST['poststext']
+            poststext = request.POST['poststext']
+
 def logout_view(request):
         user = request.COOKIES['logedin']
         response = redirect("/")

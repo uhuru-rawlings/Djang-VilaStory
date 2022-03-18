@@ -127,7 +127,7 @@ textarea{
     flex-wrap: wrap;
     justify-content: space-between;
 }
-#uploadpost form{
+#uploadpost #subformclass{
     margin: auto;
     margin-top: 50px;
     width: 60%;
