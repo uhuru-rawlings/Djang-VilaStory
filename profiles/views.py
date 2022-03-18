@@ -8,10 +8,15 @@ def profile_view(request):
     except:
         return redirect("/")
     users = Signups.objects.filter(useremail = user).first()
-
+    bios = ''
+    try:
+        bios = Profiles.objects.get(users = users)
+    except:
+        bios = "nobios"
     context = {
         'title':'vilastory | profiles',
-        'users':users
+        'users':users,
+        'bios':bios
     }
     return render(request, "profiles.html",context)
 

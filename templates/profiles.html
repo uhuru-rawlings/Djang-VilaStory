@@ -8,14 +8,20 @@
 <div class="container">
    <div class="flex_items">
       <div class="profiles">
+         {% if bios != 'nobios' %}
+         <div class="image_profile"><span><img src="{{ bios.userimage.url }}" height="70px" width="70px" alt=""></span></div>
+         {% else %}
          <div class="image_profile"><span><img src="../static/images/download.png" height="70px" width="70px" alt=""></span></div>
+         {% endif %}
          <div class="names"><span style="font-weight: bold;">Email:</span> {{users.useremail }}</div>
          <div class="names"><span style="font-weight: bold;">Phone:</span> {{users.phone }}</div>
          <div class="names"><span style="font-weight: bold;">Village:</span> {{users.village }}</div>
-         <div class="names"><span style="font-weight: bold;">Bio:</span> {{users.village }}</div>
+         {% if bios != 'nobio' %}
+         <div class="names"><span style="font-weight: bold;">Bio:</span> {{ bios.aboutme }}</div>
+         {% endif %}
       </div>
       <div class="updatenio">
-         <form action="" method="post">
+         <form action="{% url 'save_bio' %}" method="post">
             <div class="form-group">
                <input type="file" name="userimage" id="userimage" class="form-control">
             </div>
