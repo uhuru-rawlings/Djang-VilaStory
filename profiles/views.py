@@ -48,7 +48,7 @@ def addpost_view(request):
             captionposts = request.POST['captionposts']
             user = request.COOKIES['logedin']
             get_user = Signups.objects.get(useremail= user)
-            if poststext == '':
+            if poststext:
                 new_posts = Posts(postby=get_user,post_image = postsimages, post_text=captionposts)
                 new_posts.save()
             else:

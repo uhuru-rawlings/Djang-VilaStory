@@ -40,7 +40,7 @@
    <div class="form" id="subformclass">
       <p>Create a post. only use one side of the form.</p>
      <div class="flex_forms">
-         <form action="{% url 'create_posts' %}" method="post" enctype="multipart/form-data">
+         <form action="{% url 'create_posts' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
             <div class="text_posts">
                <p><div class="text-danger">*Only textpost that has no images.*</div></p>
                <div class="form-group">
@@ -52,7 +52,7 @@
          </form>
       </div>
          <div class="imageposts">
-            <form action="{% url 'create_posts' %}" method="post" enctype="multipart/form-data">
+            <form action="{% url 'create_posts' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
                   <p><div class="text-danger">*Only textpost that has images.*</div></p>
                   <div class="form-group">
                      <input type="file" name="postsimages" required id="postsimages">
@@ -70,3 +70,4 @@
 </div>
 {% endblock %}
 {% block footer %}{% endblock %}
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi, deleniti quis fugiat quas voluptates odit!
