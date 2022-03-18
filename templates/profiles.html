@@ -21,7 +21,7 @@
          {% endif %}
       </div>
       <div class="updatenio">
-         <form action="{% url 'save_bio' %}" method="post">
+         <form action="{% url 'save_bio' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
             <div class="form-group">
                <input type="file" name="userimage" id="userimage" class="form-control">
             </div>
