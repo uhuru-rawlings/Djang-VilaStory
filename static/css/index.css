@@ -122,9 +122,11 @@ textarea{
     left: 0;
     background-color: rgba(37, 43, 40,0.7);
 }
-#uploadpost form{
+.flex_forms{
     display: flex;
     flex-wrap: wrap;
+}
+#uploadpost form{
     margin: auto;
     margin-top: 50px;
     width: 60%;
