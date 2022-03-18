@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from signups.views import signup_view,signup_meth
 from logins.views import login_view,login_meth
-from profiles.views import profile_view,logout_view,savebio_view,addpost_view
+from profiles.views import profile_view,logout_view,savebio_view,addpost_view,addpostimages_view
 from posts.views import post_view
 from django.contrib.staticfiles.urls import static
 from . import settings
@@ -16,6 +16,7 @@ urlpatterns = [
     path('home/',post_view, name="homepage"),
     path('profile/',profile_view, name="profile"),
     path('create_posts/',addpost_view, name="create_posts"),
+    path('createimage_posts/',addpostimages_view, name="createimage_posts"),
     path('save_bio/',savebio_view, name="save_bio"),
     path('logout/',logout_view, name="logout"),
    

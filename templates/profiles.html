@@ -52,7 +52,7 @@
          </form>
       </div>
          <div class="imageposts">
-            <form action="{% url 'create_posts' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
+            <form action="{% url 'createimage_posts' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
                   <p><div class="text-danger">*Only textpost that has images.*</div></p>
                   <div class="form-group">
                      <input type="file" name="postsimages" required id="postsimages">
