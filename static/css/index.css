@@ -113,3 +113,10 @@ textarea{
 }.image_profile img{
     border-radius: 50%;
 }
+.uploadpost{
+    width: 100%;
+}
+.uploadpost form{
+    display: flex;
+    flex-wrap: wrap;
+}

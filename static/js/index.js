@@ -60,3 +60,7 @@ const ValidateSignup = () =>{
     }
 
 }
+
+const ShowAddStory = () =>{
+    document.getElementById("").style.display = "block"
+}
