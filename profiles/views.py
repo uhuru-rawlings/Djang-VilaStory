@@ -41,10 +41,7 @@ def savebio_view(request):
 
 
 def logout_view(request):
-    try:
         user = request.COOKIES['logedin']
-        respose = redirect("/")
-        respose.delete_cookie("logedin")
-    except:
-        return redirect("/")
-    return redirect('/')
+        response = redirect("/")
+        response.delete_cookie("logedin")
+        return response

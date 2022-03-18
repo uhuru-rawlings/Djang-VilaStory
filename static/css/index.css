@@ -110,4 +110,6 @@ input[type=checkbox]:checked:before {
 textarea{
     height: 100px;
     resize: none;
+}.image_profile img{
+    border-radius: 50%;
 }
