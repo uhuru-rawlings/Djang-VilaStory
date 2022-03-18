@@ -31,6 +31,5 @@ def addinfo_view(request):
         nearpolice = request.POST['nearpolice']
         shopingcent = request.POST['shopingcent']
         getdetails = ImportantInfo(village=users.village, hospital=nearhosp, policestation=nearpolice,market=shopingcent)
-
         getdetails.save()
     return redirect("/home/")
