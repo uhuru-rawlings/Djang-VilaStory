@@ -44,8 +44,16 @@ def addpost_view(request):
         if request.method == 'POST':
             poststext = request.POST['poststext']
             # single
-            poststext = request.POST['poststext']
-            poststext = request.POST['poststext']
+            postsimages = request.FILES['postsimages']
+            captionposts = request.POST['captionposts']
+            user = request.COOKIES['logedin']
+            get_user = Signups.objects.get(useremail= user)
+            if poststext == '':
+                new_posts = Posts(postby=get_user,post_image = postsimages, post_text=captionposts)
+                new_posts.save()
+            else:
+                new_posts = Posts(postby=get_user, post_text=poststext)
+                new_posts.save()
 
 def logout_view(request):
         user = request.COOKIES['logedin']
