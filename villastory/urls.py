@@ -6,14 +6,14 @@ from profiles.views import profile_view,logout_view,savebio_view,addpost_view,ad
 from posts.views import post_view
 from django.contrib.staticfiles.urls import static
 from . import settings
-from posts.models import ImportantInfo
+from posts.views import addinfo_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',login_view, name="login"),
     path('signin',login_meth, name="signin"),
     path('signup/',signup_view, name="signup"),
-    path('addinfo/',ImportantInfo, name="addinfo"),
+    path('addinfo/',addinfo_view, name="addinfo"),
     path('create_account/',signup_meth, name="create_account"),
     path('home/',post_view, name="homepage"),
     path('profile/',profile_view, name="profile"),

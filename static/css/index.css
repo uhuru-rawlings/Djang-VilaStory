@@ -154,6 +154,9 @@ textarea{
 .allposts{
     width: 60%;
 }
+.bold{
+    font-weight: bold;
+}
 .post_village{
     font-size: 12px;
     font-weight: 400;

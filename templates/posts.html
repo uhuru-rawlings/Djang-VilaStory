@@ -49,8 +49,25 @@
                <input type="submit" value="Submit" id="signin" style="margin-bottom: 70px;">
             </div>
          </form>
+         <div class="details">
+            <h4>Village Important Info:</h4>
+            {% if details != 'nodetails' %}
+            {% for detail in details %}
+               <div class="card">
+                  <div class="card-body">
+                     <div class="hospital"><span class="bold">hospital:</span> {{ detail.hospital }}</div>
+                     <div class="hospital"><span class="bold">police-station:</span> {{ detail.policestation }}</div>
+                     <div class="hospital"><span class="bold">market:</span> {{ detail.market }}</div>
+                  </div>
+               </div>
+            {%  endfor %}
+            {% else %}
+            <div class="text-danger text-center">No details</div>
+            {% endif %}
+         </div>
       </div>
    </div>
+   
   </div>
 
 {% endblock %}
