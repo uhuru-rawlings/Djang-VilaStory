@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from profiles.models import Posts
+from profiles.models import Posts,Profiles
 from signups.models import Signups
 from .models import ImportantInfo
 
@@ -26,7 +26,7 @@ def addinfo_view(request):
             user = request.COOKIES['logedin']
         except:
             return redirect("/home/")
-        users = Signups.objects.filter(useremail = user).first()
+        users = Signups.objects.get(useremail = user)
         nearhosp = request.POST['nearhosp']
         nearpolice = request.POST['nearpolice']
         shopingcent = request.POST['shopingcent']
