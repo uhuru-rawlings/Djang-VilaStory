@@ -20,4 +20,17 @@ def post_view(request):
     return render(request, "posts.html",context)
 
 def addinfo_view(request):
+    if request.method == 'POST':
+        try:
+            user = request.COOKIES['logedin']
+        except:
+            return redirect("/")
+        users = Signups.objects.filter(useremail = user).first()
+        nearhosp = request.POST['nearhosp']
+        nearpolice = request.POST['nearpolice']
+        shopingcent = request.POST['shopingcent']
+        try:
+            pass
+        except:
+            pass
     return redirect("/home/")
