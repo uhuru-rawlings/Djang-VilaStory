@@ -113,10 +113,21 @@ textarea{
 }.image_profile img{
     border-radius: 50%;
 }
-.uploadpost{
+#uploadpost{
     width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(37, 43, 40,0.7);
 }
-.uploadpost form{
+#uploadpost form{
     display: flex;
     flex-wrap: wrap;
+    margin: auto;
+    margin-top: 50px;
+    width: 60%;
+    background-color: white;
+    padding: 20px;
 }
