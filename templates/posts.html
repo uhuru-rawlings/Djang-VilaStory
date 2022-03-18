@@ -34,7 +34,7 @@
          {% endif %}
       </div>
       <div class="important_infor">
-         <form action="" method="post">
+         <form action="{% url 'addinfo' %}" method="post">
             {% csrf_token %}
             <div class="form-group">
                <input type="text" name="nearhosp" id="nearhosp" class="form-control" required autocomplete="off" placeholder="Enter nearest hospital">
