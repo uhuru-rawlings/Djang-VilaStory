@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect
 from signups.models import Signups
+from profiles.models import Villages
 # Create your views here.
 def signup_view(request):
+    villages = Villages.objects.all()
     context = {
         'title':'vilastory | signup',
+        'villages':villages,
     }
     return render(request, "signup.html",context)
 

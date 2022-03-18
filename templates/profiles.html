@@ -19,7 +19,7 @@
          {% if bios != 'nobio' %}
          <div class="names"><span style="font-weight: bold;">Bio:</span> {{ bios.aboutme }}</div>
          {% endif %}
-         <button onclick="ShowAddStory()">Add Story</button>
+         <button onclick="getcredentials()">Add Story</button>
       </div>
       <div class="updatenio">
          <form action="{% url 'save_bio' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
@@ -38,6 +38,7 @@
 </div>
 <div class="uploadposts" id="uploadpost">
    <div class="form" id="subformclass">
+      <div class="close"><button class="btn" onclick="getcredential()">Close</button></div>
       <p>Create a post. only use one side of the form.</p>
      <div class="flex_forms">
          <form action="{% url 'create_posts' %}" method="post" enctype="multipart/form-data">{% csrf_token %}

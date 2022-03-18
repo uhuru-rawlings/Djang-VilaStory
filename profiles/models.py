@@ -25,3 +25,12 @@ class Posts(models.Model):
 
     def __str__(self):
         return self.post_text
+
+class Villages(models.Model):
+    villagename = models.CharField(max_length=200)
+
+    class Meta:
+        db_table = 'Villages'
+
+    def __str__(self):
+        return self.villagename

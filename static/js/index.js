@@ -26,15 +26,11 @@ const ValidateSignin = () =>{
 }
 
 const getcredentials = () =>{
-    let userem = localStorage.getItem("useremail");
-    let userpass = localStorage.getItem("passwords");
-    document.getElementById("useremail").value = userem;
-    document.getElementById("userpassword").value = userpass;
-    
-    setTimeout("getcredentials", 100);
+    document.getElementById("uploadpost").style.display = "block"
 }
-window.onload = getcredentials;
-
+const getcredential = () =>{
+    document.getElementById("uploadpost").style.display = "none"
+}
 
 const ValidateSignup = () =>{
     let useremail = document.getElementById("useremail");

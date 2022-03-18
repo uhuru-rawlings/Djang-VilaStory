@@ -159,6 +159,9 @@ textarea{
     font-weight: 400;
     color: gray;
 }
+#uploadpost{
+    display: none;
+}
 .posttimes{
     font-size: 14px;
     color: gray;
