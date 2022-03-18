@@ -45,7 +45,7 @@ def addpost_view(request):
             poststext = request.POST['poststext']
             user = request.COOKIES['logedin']
             get_user = Signups.objects.get(useremail= user)
-            new_posts = Posts(postby=get_user, post_text=poststext)
+            new_posts = Posts(postby=get_user, post_text=poststext,post_village=get_user.village)
             new_posts.save()
             return redirect("/home/")
 
@@ -55,7 +55,7 @@ def addpostimages_view(request):
             captionposts = request.POST['captionposts']
             user = request.COOKIES['logedin']
             get_user = Signups.objects.get(useremail= user)
-            new_posts = Posts(postby=get_user,post_image = postsimages, post_text=captionposts)
+            new_posts = Posts(postby=get_user,post_image = postsimages, post_text=captionposts, post_village=get_user.village)
             new_posts.save()
             return redirect("/home/")
 
