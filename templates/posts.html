@@ -8,6 +8,22 @@
   <div class="posts">
      <div class="allposts">
         {% if get_posts != 'noposts' %}
+         {% for post in get_posts %}
+           {% if get_posts.post_image %}
+            <div class="signle_post">
+               <div class="postby">{{ post.postby }}</div>
+               <div class="post_image"><img src="{{ post.post_image.url }}" width="100%" height="250px" alt=""></div>
+               <div class="posttexts">{{ post.post_text }}</div>
+               <div class="post_village">{{ post.post_village }}</div>
+            </div>
+           {% else %}
+              <div class="signle_post">
+                 <div class="postby">{{ post.postby }}</div>
+                 <div class="posttexts">{{ post.post_text }}</div>
+                 <div class="post_village">{{ post.post_village }}</div>
+              </div>
+           {% endif %}
+         {% endfor %}
         {% else %}
         <div class="text-center text-info">No post from this village.</div>
         {% endif %}
