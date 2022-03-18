@@ -4,5 +4,14 @@
 {% block navbar %}
    {% include 'navbar.html' %}
 {% endblock %}
-{% block content %}{% endblock %}
+{% block content %}
+  <div class="posts">
+     <div class="allposts">
+        {% if get_posts != 'noposts' %}
+        {% else %}
+        <div class="text-center text-info">No post from this village.</div>
+        {% endif %}
+     </div>
+  </div>
+{% endblock %}
 {% block footer %}{% endblock %}
