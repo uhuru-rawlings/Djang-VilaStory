@@ -18,3 +18,6 @@ def post_view(request):
         'get_posts':get_posts,
     }
     return render(request, "posts.html",context)
+
+def addinfo_view(request):
+    return redirect("/home/")
