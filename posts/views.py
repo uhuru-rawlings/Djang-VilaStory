@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from profiles.models import Posts
 from signups.models import Signups
+from .models import ImportantInfo
 
 # Create your views here.
 def post_view(request):
@@ -29,8 +30,7 @@ def addinfo_view(request):
         nearhosp = request.POST['nearhosp']
         nearpolice = request.POST['nearpolice']
         shopingcent = request.POST['shopingcent']
-        try:
-            pass
-        except:
-            pass
+        getdetails = ImportantInfo(village=users.village, hospital=nearhosp, policestation=nearpolice,market=shopingcent)
+
+        getdetails.save()
     return redirect("/home/")
