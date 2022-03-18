@@ -38,21 +38,23 @@
 </div>
 <div class="uploadposts" id="uploadpost">
    <form action="" method="post" enctype="multipart/form-data">
-     <div class="text_posts">
-         <div class="form-group">
-            <textarea name="poststext" id="poststext" cols="30" rows="10" placeholder="Whats happening"></textarea>
+     <div class="flex_forms">
+         <div class="text_posts">
+            <div class="form-group">
+               <textarea name="poststext" id="poststext" cols="30" rows="10" placeholder="Whats happening"></textarea>
+            </div>
+      </div>
+         <div class="imageposts">
+            <div class="form-group">
+               <input type="file" name="postsimages" id="postsimages">
+            </div>
+            <div class="form-group">
+               <textarea name="captionposts" id="captionposts" cols="30" rows="10"></textarea>
+            </div>
          </div>
      </div>
-      <div class="imageposts">
-         <div class="form-group">
-            <input type="file" name="postsimages" id="postsimages">
-         </div>
-         <div class="form-group">
-            <textarea name="captionposts" id="captionposts" cols="30" rows="10"></textarea>
-         </div>
-      </div>
       <div class="form-group">
-         <input type="submit" value="Sign-In" id="signin" onclick="return ValidateSignin()" style="margin-bottom: 70px;">
+         <input type="submit" value="Sign-In" id="signin" style="margin-bottom: 70px;">
       </div>
    </form>
 </div>
