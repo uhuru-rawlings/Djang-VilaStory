@@ -154,6 +154,11 @@ textarea{
 .allposts{
     width: 60%;
 }
+.post_village{
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+}
 .posttimes{
     font-size: 14px;
     color: gray;

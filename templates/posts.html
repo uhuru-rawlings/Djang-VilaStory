@@ -12,11 +12,10 @@
           {% for post in get_posts %}
             {% if post.post_image != ''%}
              <div class="signle_post card">
-               <div class="postby">{{ post.postby }} <br> <div class="post_village">{{ post.post_village }}</div></div>
+               <div class="postby">{{ post.postby }} <br> <span class="post_village">{{ post.post_village }}</span></div>
                 <div class="post_image"><img src="{{ post.post_image.url }}" width="100%" height="100%" alt=""></div>
                 <div class="card-body">
                   <div class="posttexts">{{ post.post_text }}</div>
-                  <div class="post_village">{{ post.post_village }}</div>
                   <div class="posttimes">{{ post.post_dates }}</div>
                 </div>
              </div>
