@@ -138,3 +138,27 @@ textarea{
 #captionposts{
     height: 40px;
 }
+.signle_post .post_image{
+    width: 100%;
+    height: 250px;
+}
+.posts{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
+}
+.postby{
+    font-weight: bold;
+    padding: 10px;
+}
+.allposts{
+    width: 60%;
+}
+.posttimes{
+    font-size: 14px;
+    color: gray;
+}
+.card{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
