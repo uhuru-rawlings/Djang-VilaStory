@@ -19,15 +19,16 @@
          {% if bios != 'nobio' %}
          <div class="names"><span style="font-weight: bold;">Bio:</span> {{ bios.aboutme }}</div>
          {% endif %}
-         <button onclick="getcredentials()">Add Story</button>
+         <button onclick="getcredentials()" class="btn bg-dark text-light">Add Story</button>
       </div>
       <div class="updatenio">
+         <p>update bio</p>
          <form action="{% url 'save_bio' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
             <div class="form-group">
                <input type="file" name="userimage" id="userimage" class="form-control">
             </div>
             <div class="form-group">
-               <textarea name="biotext" id="biotext" cols="30" rows="10" class="form-control"></textarea>
+               <textarea name="biotext" id="biotext" cols="30" rows="10" class="form-control" required placeholder="Type your bio information here"></textarea>
             </div>
             <div class="form-group">
                <input type="submit" value="Sign-Up" id="signin" style="margin-bottom: 30px;">
@@ -38,7 +39,7 @@
 </div>
 <div class="uploadposts" id="uploadpost">
    <div class="form" id="subformclass">
-      <div class="close"><button class="btn" onclick="getcredential()">Close</button></div>
+      <div class="close"><button class="btn bg-dark text-light" onclick="getcredential()">Close</button></div>
       <p>Create a post. only use one side of the form.</p>
      <div class="flex_forms">
          <form action="{% url 'create_posts' %}" method="post" enctype="multipart/form-data">{% csrf_token %}
