@@ -14,7 +14,6 @@ web application that allows you to be in the loop about everything happening in 
 ### Requirements
 1. Python
 2. Django
-3. Django Rest Framework
 3. Postgres
 4. Virtual Environment
 
@@ -29,3 +28,5 @@ creating virtual environment <code>python3 -m virtualenv virtual</code>
    <li>deactivating virtual(ubuntu) <code>(virtual) moringa@moringa-ThinkPad-X260:~/Django_Projects/Ip2$ <i>deactivate</i></code></li>
 </li>
 
+## SCREENSHORT
+![images.png](images.png)
