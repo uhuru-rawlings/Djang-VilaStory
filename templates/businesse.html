@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}{{ title  }}{% endblock %}
+
+{% block navbar %}
+   {% include 'navbar.html' %}
+{% endblock %}
+{% block content %}
+  <div class="container">
+   <div class="posts">
+      <div class="allposts">
+        <h3>Search For: {{ searchitem }}</h3>
+      <div class="important_infor">
+         <div class="details">
+            <h6>Search Result:</h6>
+            {% if details != 'nodetails' %}
+                {% for detail in details %}
+                <div class="card">
+                    <div class="card-body">
+                        <div class="hospital"><span class="bold">market:</span> {{ detail.market }}</div>
+                    </div>
+                </div>
+                {%  endfor %}
+            {% else %}
+            <div class="card">
+                <div class="card-body">
+                    <div class="hospital"><span class="bold">market:</span> No result matches your search.</div>
+                </div>
+            </div>
+            {% endif %}
+         </div>
+         <h4>You may consider:</h4>
+         {% if allsearch != 'nodata' %}
+            {% for search in allsearch %}
+               <div class="card">
+                  <div class="card-body">
+                     <div class="hospital"><span class="bold">market:</span> {{ search.market }}</div>
+                  </div>
+               </div>
+        {%  endfor %}
+        {% else %}
+            <div class="text-danger text-center">No details</div>
+        {% endif %}
+      </div>
+   </div>
+   
+  </div>
+
+{% endblock %}
+{% block footer %}{% endblock %}

@@ -8,6 +8,14 @@
   <div class="container">
    <div class="posts">
       <div class="allposts">
+         <div class="searchforms">
+            <form action="{% url 'searchitems' %}" method="post">
+               {% csrf_token %}
+               <div class="form-group">
+                  <input type="search" autocomplete="off" name="searchitems" id="searchitems" class="form-control" placeholder="Enter bussinessname">
+               </div>
+            </form>
+         </div>
          {% if get_posts != 'noposts' %}
           {% for post in get_posts %}
             {% if post.post_image != ''%}

@@ -7,6 +7,7 @@ from posts.views import post_view
 from django.contrib.staticfiles.urls import static
 from . import settings
 from posts.views import addinfo_view
+from searchitems.views import searchitems_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -14,6 +15,7 @@ urlpatterns = [
     path('signin',login_meth, name="signin"),
     path('signup/',signup_view, name="signup"),
     path('addinfo/',addinfo_view, name="addinfo"),
+    path('searchitems/',searchitems_view, name="searchitems"),
     path('create_account/',signup_meth, name="create_account"),
     path('home/',post_view, name="homepage"),
     path('profile/',profile_view, name="profile"),

@@ -1,0 +1,1 @@
+web: gunicorn villastory.wsgi --log-file -

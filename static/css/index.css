@@ -173,3 +173,8 @@ textarea{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+#searchitems{
+    height: 45px !important;
+    border-radius: 25px;
+    padding-left: 20px;
+}

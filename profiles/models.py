@@ -6,7 +6,7 @@ class Profiles(models.Model):
     users = models.ForeignKey(Signups, on_delete = models.CASCADE)
     userimages = models.ImageField(upload_to = 'profiles/')
     aboutme = models.TextField()
-
+    
     class Meta:
         db_table = 'Profiles'
 
